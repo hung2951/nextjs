@@ -1,16 +1,16 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
+.nav-bar{
+    @apply bg-black text-white h-12 leading-[48px] pl-5
 }
-
-* {
-  box-sizing: border-box;
+.nav-bar ul{
+    @apply flex pr-7
+}
+.nav-bar li{
+    @apply pr-5
+}
+.nav-bar li a{
+    @apply block hover:bg-white hover:text-black
 }
