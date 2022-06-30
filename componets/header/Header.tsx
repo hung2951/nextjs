@@ -5,7 +5,7 @@ type Props = {}
 const Header = (props: Props) => {
   return (
     <div className='nav-bar'>
-        <ul className='flex'>
+        <ul className=''>
             <li>
                 <Link href={`/`}><a className='text-blue-700'>Home Page</a></Link>
             </li>

@@ -12,5 +12,5 @@
     @apply pr-5
 }
 .nav-bar li a{
-    @apply block hover:bg-white hover:text-black
+    @apply block hover:bg-white hover:text-black px-2 hover:transition-all
 }

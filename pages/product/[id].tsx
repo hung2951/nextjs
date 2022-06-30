@@ -1,15 +1,40 @@
-import { useRouter } from 'next/router'
-import React from 'react'
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
+type ProductProps = {
+  product:any
+}
 
-type Props = {}
-
-const ProductDetail = (props: Props) => {
-    const router = useRouter()
-    console.log(router.query['id']);
-    
+const ProductDetail = (props: ProductProps) => {
+  if (!props.product) {
+    return null
+  }
   return (
-    <div>ProductDetail</div>
+    <div>
+      {props.product.name}
+    </div>
   )
 }
 
+export const getStaticPaths:GetStaticPaths = async () => {
+  const data = await (await fetch(`http://localhost:8000/products`)).json()
+  const paths = data.map((item:any)=>{
+    return{params:{id:item.id}}
+  })
+  return {
+    paths,
+    fallback:false
+  }
+}
+export const getStaticProps: GetStaticProps<ProductProps> = async (context:GetStaticPropsContext)=>{
+  const data = await (await fetch(`http://localhost:8000/products/${context.params?.id}`)).json()
+  if (!data) {
+    return{
+      notFound:true
+    }
+  }
+  return {
+    props:{
+      product:data
+    }
+  }
+}
 export default ProductDetail
