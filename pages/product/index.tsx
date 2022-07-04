@@ -18,7 +18,6 @@ const ProductPage = (props: ProductProps) => {
         <title>Product</title>
       </Head>
       <main>
-        <Header/>
         <h1 className='text-blue-900 text-2xl'>
           {props.products.map(item=>
             <div key={item.id}><Link href={`product/${item.id}`}>{item.name}</Link></div>

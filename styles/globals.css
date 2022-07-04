@@ -14,3 +14,9 @@
 .nav-bar li a{
     @apply block hover:bg-white hover:text-black px-2 hover:transition-all
 }
+.content{
+    @apply min-h-[650px]
+}
+.footer{
+    @apply bg-cyan-600 text-center mt-5 text-white h-10 leading-[40px]
+}
