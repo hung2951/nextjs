@@ -5,8 +5,15 @@
       "name": "Sản phẩm 1"
     },
     {
-      "id":"2",
+      "id": "2",
       "name": "Sản phẩm 2"
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$rHmVtKexZ9tROyPDjSXwDOF/ZR4BMdJPkpTy5aByit6q0geDGlzRa",
+      "id": 1
     }
   ]
 }

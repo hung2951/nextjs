@@ -15,6 +15,9 @@ const Header = (props: Props) => {
             <li>
                 <Link href={`/admin`}><a>Admin</a></Link>
             </li>
+            <li>
+                <Link href={`/login`}><a>Login</a></Link>
+            </li>
         </ul>
     </div>
   )
