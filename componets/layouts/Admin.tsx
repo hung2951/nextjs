@@ -27,7 +27,7 @@ const LayoutAdmin = (props: LayoutProps) => {
         </header>
         <div className='layout_admin'>
             <div className='layout_admin_sidebar'>
-              <p><Link href={`product/`}>Sản phẩm</Link></p>
+              <p><Link href={`/admin/product/`}>Sản phẩm</Link></p>
               <p><Link href={`product/`}>Sản phẩm</Link></p>
               <p><Link href={`product/`}>Sản phẩm</Link></p>
             </div>

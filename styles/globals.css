@@ -54,3 +54,7 @@
 .layout_admin_sidebar p{
     @apply leading-10 hover:text-red-600
 }
+
+.layout_admin_content{
+    @apply mx-10
+}

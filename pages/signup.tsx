@@ -10,10 +10,13 @@ type formInputs={
     password:string
 }
 const Signup = (props: Props) => {
-    const {signUp} = useAuth()
+    const {signUp,error} = useAuth()
     const {register,handleSubmit,formState:{errors}} = useForm<formInputs>();
     const onSubmit:SubmitHandler<formInputs> = async (data) =>{
         signUp(data)
+        if (error) {
+            alert('Đăng ký thất bại')
+        }
     }
   return (
     <div>
@@ -26,7 +29,7 @@ const Signup = (props: Props) => {
                 <input {...register('password')} className='block w-full h-10 rounded-sm pl-2 border border-[#ccc]' type="password" placeholder='Password' />
             </label>
             <p className='text-sm mt-3'>Do you already have an account? <Link href={`/login`}><a className='underline text-blue-500'>Login now</a></Link></p>
-            <button className='bg-blue-600 h-10 mt-7 w-28 rounded-sm text-white hover:bg-blue-500'>Login</button>
+            <button className='bg-blue-600 h-10 mt-7 w-28 rounded-sm text-white hover:bg-blue-500'>Sign Up</button>
         </form>
 
     </div>

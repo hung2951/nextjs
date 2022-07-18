@@ -2,18 +2,35 @@
   "products": [
     {
       "id": "1",
-      "name": "Sản phẩm 1"
+      "name": "Sản phẩm 1",
+      "price": 200
     },
     {
-      "id": "2",
-      "name": "Sản phẩm 2"
+      "name": "sản phẩm 2",
+      "price": "100",
+      "id": "1UR8d-8"
+    },
+    {
+      "name": "sản phẩm 3",
+      "price": "300",
+      "id": "OF7Ed4_"
     }
   ],
   "users": [
     {
       "email": "admin@gmail.com",
-      "password": "$2a$10$rHmVtKexZ9tROyPDjSXwDOF/ZR4BMdJPkpTy5aByit6q0geDGlzRa",
+      "password": "$2a$10$hV7dQh114aLs94d0Pt7eoOPGuaif1N7IQW2VCEwMRAKBR.qxVOKjW",
       "id": 1
+    },
+    {
+      "email": "hung@gmail.com",
+      "password": "$2a$10$2Vxh6IA79.6rK31x0mFahOaAgiGMRfKcP0eALxJkPy9DnWCRQdM5G",
+      "id": 2
+    },
+    {
+      "email": "taikhoanmoi@gmail.com",
+      "password": "$2a$10$i8DHIB7wW7zsW.eQmVXR2ORgT0x1bCdL5wddKJ70AUw7fL0j.gtFu",
+      "id": 3
     }
   ]
 }

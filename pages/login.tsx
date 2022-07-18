@@ -13,8 +13,8 @@ const Login = (props: Props) => {
     const {login} = useAuth()
     const {register,handleSubmit,formState:{errors}} = useForm<formInputs>();
     const onSubmit:SubmitHandler<formInputs> = async (data) =>{
-      login(data)
-        // console.log(user);
+        login(data)
+        console.log(login(data));
         // localStorage.setItem('user',JSON.stringify(user))
     }
   return (

@@ -1,24 +1,18 @@
 import useSWR, { useSWRConfig } from "swr"
-import { list, signin, signup } from "../pages/api/auth"
+import { signin, signup } from "../pages/api/auth"
 
 export const useAuth = ()=>{
     //list user
-    const fetcher = async(url:string)=>{
-        const {data} = await list(url)
-        return data
-    }
-    const {data,error} = useSWR('/users',fetcher)
-    const {mutate} = useSWRConfig()
+    const {data,error,mutate} = useSWR('/users')
     //signup
-    const signUp = (user:any)=>{
-        mutate("/users",async()=>{
-            const {data:users} = await signup(user)
-            return [...data,users]
-        })
+    const signUp = async (item:any)=>{
+        const user = await signup(item)
+        mutate([...data,user])
     }
     // login
-    const login = (user:any)=>{
-        mutate("/users",()=>signin(user))
+    const login = (item:any)=>{
+        const user = signin(item)
+        mutate(user)
     }
     return {data,error,signUp,login}
 }
